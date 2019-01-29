@@ -81,7 +81,6 @@ class Money
   end
 
   def self.getRate(from_currency, to_currency)
-    return 1 if to_currency == from_currency
 
     if !@@conversion_rates[to_currency].nil? && from_currency == @@base_currency
       return @@conversion_rates[to_currency]
