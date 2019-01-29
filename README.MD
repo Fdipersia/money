@@ -62,7 +62,7 @@ gem install money_handler
 
 ```
 irb
-require 'money_handler'
+require 'money'
 Money.new
 ```
 Tested using RSpec
