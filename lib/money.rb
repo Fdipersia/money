@@ -15,6 +15,11 @@ class Money
     @currency = currency
   end
 
+  def self.conversion_rates(base_currency, conversion_rates)
+		@@base_currency = base_currency
+		@@conversion_rates = conversion_rates
+	end
+
   #Convert method
   def convert_to(to_currency)
     if @@conversion_rates[to_currency].nil?
@@ -54,25 +59,25 @@ class Money
   #Comparisons
   def ==(other)
     temp = other.convert_to(self.currency)
-    return self.amount.round(2) == temp.amount.round(2)
+    self.amount.round(2) == temp.amount.round(2)
   end
 
   def >(other)
     temp = other.convert_to(self.currency)
-    return self.amount.round(2) > temp.amount.round(2)
+    self.amount.round(2) > temp.amount.round(2)
   end
 
   def <(other)
     temp = other.convert_to(self.currency)
-    return self.amount.round(2) < temp.amount.round(2)
+    self.amount.round(2) < temp.amount.round(2)
   end
 
   def inspect
-    return sprintf('%.2f %s', amount, currency)
+    sprintf('%.2f %s', amount, currency)
   end
 
   def to_s
-    return sprintf('%.2f %s', amount, currency)
+    sprintf('%.2f %s', amount, currency)
   end
 
   def self.getRate(from_currency, to_currency)

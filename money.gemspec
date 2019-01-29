@@ -6,7 +6,6 @@ Gem::Specification.new do |s|
   s.authors     = ["Francisco Di Persia"]
   s.email       = 'fdipersia@gmail.com'
   s.files       = ["lib/money.rb"]
-  s.homepage    =
-    'http://rubygems.org/gems/money_handler'
+  s.homepage    = 'https://github.com/Fdipersia/money'
   s.license     = 'MIT'
 end
