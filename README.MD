@@ -10,7 +10,6 @@ Default currency and convertions
     'USD' => 1.11,
     'Bitcoin' => 0.0047
   }
-end
 ```
 
 #### Instantiate object
@@ -55,7 +54,7 @@ twenty_dollars > Money.new(5, 'USD')   # => true
 twenty_dollars < fifty_eur             # => true
 ```
 
-It is located in rubygems.org
+#### It is located in rubygems.org
 ```
 gem install money_handler
 ```
@@ -65,4 +64,4 @@ irb
 require 'money'
 Money.new
 ```
-Tested using RSpec
+##### Tested using RSpec
